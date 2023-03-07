@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Idade</th>
+      <th scope="col">Data De Nascimento</th>
+      <th scope="col">E-mail</th>
+      <th scope="col" class="text-center">
+        <button type="button" class="btn btn-success" routerLink="novo">+ Novo</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pessoa of pessoas$ | async">
+      <th scope="row" >1</th>
+      <td>{{ pessoa.id }}</td>
+      <td>{{ pessoa.nome }}</td>
+      <td>{{ pessoa.idade }}</td>
+      <td>{{ pessoa.email }}</td>
+      <td>{{ pessoa.cpf }}</td>
+      <td class="text-center" style="width: 300px">
+        <button type="button" class="btn btn-primary me-md-2" routerLink="editar/:id">Editar</button>
+        <button type="button" class="btn btn-danger">Remover</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

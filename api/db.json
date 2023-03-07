@@ -1,0 +1,11 @@
+{
+  "pessoas": [
+    {
+      "id": 1,
+      "nome": "Alagoas",
+      "idade": "PR",
+      "email": "igroasd@",
+      "cpf": "234234234234"
+    }
+  ]
+}
