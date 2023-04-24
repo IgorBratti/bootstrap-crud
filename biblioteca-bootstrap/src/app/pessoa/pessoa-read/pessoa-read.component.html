@@ -1,3 +1,5 @@
+<h2>Cadastro</h2>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -5,7 +7,7 @@
       <th scope="col">Nome</th>
       <th scope="col">Idade</th>
       <th scope="col">Data De Nascimento</th>
-      <th scope="col">E-mail</th>
+      <th scope="col">CPF</th>
       <th scope="col" class="text-center">
         <button type="button" class="btn btn-success" routerLink="novo">+ Novo</button>
       </th>
@@ -13,15 +15,14 @@
   </thead>
   <tbody>
     <tr *ngFor="let pessoa of pessoas$ | async">
-      <th scope="row" >1</th>
       <td>{{ pessoa.id }}</td>
       <td>{{ pessoa.nome }}</td>
       <td>{{ pessoa.idade }}</td>
-      <td>{{ pessoa.email }}</td>
-      <td>{{ pessoa.cpf }}</td>
+      <td>{{ pessoa.dataDeNascimento! | mask: 'd0/m0/0000' }}</td>
+      <td>{{ pessoa.cpf! | mask: '000.000.000-00' }}</td>
       <td class="text-center" style="width: 300px">
-        <button type="button" class="btn btn-primary me-md-2" routerLink="editar/:id">Editar</button>
-        <button type="button" class="btn btn-danger">Remover</button>
+        <button type="button" class="btn btn-primary me-md-2" (click)="onEdit(pessoa.id)">Editar</button>
+        <button type="button" class="btn btn-danger" (click)="deletePessoa(pessoa.id)">Remover</button>
       </td>
     </tr>
   </tbody>

@@ -6,8 +6,9 @@ import { PessoaReadComponent } from './pessoa-read/pessoa-read.component';
 
 const routes: Routes = [
   { path: '', component: PessoaReadComponent },
+  { path: 'pessoa', component: PessoaReadComponent },
   { path: 'novo', component: PessoaCreateComponent },
-  { path: 'editar/id', component: PessoaUpdateComponent }
+  { path: 'editar/:id', component: PessoaUpdateComponent }
 ];
 
 @NgModule({

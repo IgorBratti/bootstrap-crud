@@ -1,21 +1,58 @@
 <h1>Atualizar Cadastro de Pessoa</h1>
-<form>
-  <div class="mb-3">
-    <label  class="form-label">Nome</label>
-    <input type="nome" class="form-control" id="nome" >
+<form #formPessoa="ngForm">
+  <div class="mb-3 col-md-4 position-relative">
+    <label class="form-label">Nome</label>
+    <input
+      type="nome"
+      class="form-control"
+      placeholder="nome"
+      [(ngModel)]="pessoa.nome"
+      id="nome"
+      name="nome"
+    />
   </div>
-  <div class="mb-3">
+  <div class="mb-3 col-md-4 position-relative">
     <label class="form-label">Idade</label>
-    <input type="idade" class="form-control" id="idade">
+    <input
+      type="idade"
+      class="form-control"
+      placeholder="idade"
+      [(ngModel)]="pessoa.idade"
+      id="idade"
+      name="idade"
+      numerico
+    />
   </div>
-  <div class="mb-3">
-    <label class="form-label">E-mail</label>
-    <input type="email" class="form-control" id="email">
+  <div class="mb-3 col-md-4 position-relative">
+    <label class="form-label">Data De Nascimento</label>
+    <input
+      type="dataDeNascimento"
+      class="form-control"
+      placeholder="00/00/0000"
+      [(ngModel)]="pessoa.dataDeNascimento"
+      id="dataDeNascimento"
+      name="dataDeNascimento"
+      mask="d0/m0/0000"
+    />
   </div>
-  <div class="mb-3">
+  <div class="mb-3 col-md-4 position-relative">
     <label class="form-label">CPF</label>
-    <input type="cpf" class="form-control" id="cpf" >
+    <input
+      type="cpf"
+      class="form-control"
+      placeholder="000.000.000-00"
+      [(ngModel)]="pessoa.cpf"
+      id="cpf"
+      name="cpf"
+      mask="000.000.000-00"
+    />
   </div>
-  <button type="button" class="btn btn-success me-md-2" routerLink="">Atualizar</button>
+  <button
+    type="button"
+    class="btn btn-success me-md-2"
+    (click)="updateProduct()"
+  >
+    Atualizar
+  </button>
   <button type="button" class="btn btn-danger">Remover</button>
 </form>

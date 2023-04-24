@@ -1,0 +1,121 @@
+<table>
+<thead>
+  <tr>
+    <th colspan="12">Boletim Escolar</th>
+  </tr>
+  <tr>
+    <th colspan="12">Nome: <input type="text"></th>
+
+  </tr>
+  <tr>
+    <th colspan="12">Escola: <input type="text"></th>
+  </tr>
+  <tr>
+    <th colspan="4">Número: <input type="text"></th>
+    <th colspan="4">Turma: <input type="text"></th>
+    <th colspan="4">Turno: <input type="text"></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th rowspan="2">Materias</th>
+    <th colspan="4">Notas</th>
+    <th colspan="4">Faltas</th>
+    <th rowspan="2">Notas Total</th>
+    <th rowspan="2">Faltas Total</th>
+    <th rowspan="2"> Resultado Final</th>
+  </tr>
+  <tr>
+    <th> 1° Bim</th>
+    <th> 2° Bim</th>
+    <th> 3° Bim</th>
+    <th> 4° Bim</th>
+
+    <th> 1° Bim</th>
+    <th> 2° Bim</th>
+    <th> 3° Bim</th>
+    <th> 4° Bim</th>
+  </tr>
+  <tr>
+    <th>Portugues</th>
+    <th><input #nota1 class="input"></th>
+    <th><input #nota2 class="input"></th>
+    <th><input #nota3 class="input"></th>
+    <th><input #nota4 class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <input type="text" [value]="resultado">
+  </tr>
+  <tr>
+    <th>Matematica</th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+  </tr>
+  <tr>
+    <th>Geografia</th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+  </tr>
+  <tr>
+    <th>Historia</th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+  </tr>
+  <tr>
+    <th>Artes</th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+  </tr>
+  <tr>
+    <th>Educação fisica</th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+  </tr>
+  <tr>
+    <th>Ciências</th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+    <th><input class="input"></th>
+  </tr>
+
+</tbody>
+</table>
+
+<input type="button" value="Somar" (click)="somar(nota1.value, nota2.value, nota3.value, nota4.value)">
